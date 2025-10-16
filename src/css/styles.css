@@ -62,13 +62,6 @@ button:hover {
   display: none;
 }
 
-.loading-message {
-  font-size: 18px;
-  color: black;
-  text-align: center;
-  animation: pulse 1s infinite;
-}
-
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -76,6 +69,13 @@ button:hover {
   100% {
     transform: rotate(360deg);
   }
+}
+
+.loading-message {
+  font-size: 18px;
+  color: black;
+  text-align: center;
+  animation: pulse 1s infinite;
 }
 
 .gallery {
