@@ -64,7 +64,8 @@ button:hover {
 
 .loading-message {
   font-size: 18px;
-  color: #4E75FF;
+  color: black;
+  text-align: center;
   animation: pulse 1s infinite;
 }
 
