@@ -122,26 +122,6 @@ button:hover {
   flex: 1;
 }
 
-.info-block:nth-child(1) {
-  width: 34px;
-  height: 40px;
-}
-
-.info-block:nth-child(2) {
-  width: 48px;
-  height: 40px;
-}
-
-.info-block:nth-child(3) {
-  width: 72px;
-  height: 40px;
-}
-
-.info-block:nth-child(4) {
-  width: 74px;
-  height: 40px;
-}
-
 .info-title {
   font-weight: bold;
   font-size: 12px;
