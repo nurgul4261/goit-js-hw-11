@@ -1,15 +1,31 @@
 import 'izitoast/dist/css/iziToast.min.css';
-import 'simplelightbox/dist/simple-lightbox.min.css';
-
-import { fetchImages } from './js/fetchImages.js';
-import SimpleLightbox from 'simplelightbox';
 import iziToast from 'izitoast';
+import 'simplelightbox/dist/simple-lightbox.min.css';
+import SimpleLightbox from 'simplelightbox';
+
 
 const form = document.querySelector('#search-form');
 const gallery = document.querySelector('.gallery');
 const loader = document.querySelector('.loader');
 const loadingMessage = document.querySelector('.loading-message');
 const lightbox = new SimpleLightbox('.gallery a');
+
+import axios from 'axios';
+
+const BASE_URL = 'https://pixabay.com/api/';
+const API_KEY = '52711277-f6548e7cff1e8c2b9d8773286';
+
+export function fetchImages(query) {
+  const params = {
+    key: API_KEY,
+    q: query,
+    image_type: 'photo',
+    orientation: 'horizontal',
+    safesearch: true,
+  };
+
+  return axios.get(BASE_URL, { params }).then(response => response.data);
+}
 
 function showLoadingMessage() {
   loadingMessage.classList.remove('hidden');
